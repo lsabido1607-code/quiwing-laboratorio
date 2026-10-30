@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quiwing Laboratorio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Primer entregable del brief de Quiwing: principios, tres direcciones para el hero, tres interacciones, gramática de movimiento y storyboard móvil.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500;600;700;800&family=Poppins:wght@400;500;600&family=Inter:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="lab.css">
+<link rel="stylesheet" href="demos.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="9" result="b"/><feColorMatrix in="b" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -8" result="g"/><feComposite in="SourceGraphic" in2="g" operator="atop"/></filter></svg>
+
+<header class="barra envoltura">
+  <a class="marca" href="#arriba"><b>Quiwing.</b><span>Laboratorio</span></a>
+  <nav class="indice" aria-label="Secciones"><a href="#principios">A</a><a href="#hero">B</a><a href="#interacciones">C</a><a href="#movimiento">D</a><a href="#storyboard">E</a><a href="#eleccion">Elegir</a></nav>
+  <button class="sonido" id="sonido" type="button" aria-pressed="false"><i></i><span>Sonido no</span></button>
+</header>
+
+<main class="envoltura" id="arriba">
+  <section class="portada">
+    <span class="codigo">Primer encargo del brief maestro</span>
+    <h1>¿Cómo se siente Quiwing?</h1>
+    <p class="lead">Antes de la página completa, estas piezas sirven para decidir el lenguaje: cómo se ve, cómo se mueve y cómo suena. Todo se puede tocar. Al final, escoge la dirección que se siente Quiwing.</p>
+    <div class="mezcla"><span><b>mymind</b> elegancia y silencio</span><span><b>Endel</b> movimiento vivo</span><span><b>Headspace</b> reconocer el momento</span><span><b>Método</b> Orienta → Reduce → Activa → Cierra</span></div>
+  </section>
+
+  <!-- A · principios -->
+  <section class="seccion" id="principios">
+    <div class="cabeza"><span class="codigo">A · Moodboard de principios</span><h2>Lo que se siente antes de leer.</h2>
+      <p>No son capturas de otras marcas: son las reglas con las que se construye todo lo demás.</p></div>
+    <div class="principios">
+      <article class="principio"><h3>Aire</h3><div class="demo"><div class="p-aire"><span>Solo una cosa.</span></div></div><p class="regla">Más espacio que cosas. Una acción dominante por pantalla.</p></article>
+      <article class="principio"><h3>Ritmo</h3><div class="demo"><div class="p-ritmo"><i></i><i></i><i></i><i></i></div></div><p class="regla">Movimiento continuo y calmado. Nada rápido, nada que parpadee.</p></article>
+      <article class="principio"><h3>Materialidad</h3><div class="demo"><div class="p-materia"><span class="p-papel">Papel</span><span class="p-fieltro">Fieltro</span><span class="p-ceramica">Cerámica</span></div></div><p class="regla">Objetos con cuerpo: cerámica mate, papel y fieltro. Sin neón ni plástico brillante.</p></article>
+      <article class="principio"><h3>Motion</h3><div class="demo"><button id="p-motion" type="button" aria-label="Toca para ver cómo encaja"><span class="p-ranura"><span class="objeto p-punto" style="--c:var(--activa)"></span></span><span class="p-ranura"></span></button></div><p class="regla">El movimiento significa algo. Toca: así se ve ENCAJAR, «esto queda aquí».</p></article>
+      <article class="principio"><h3>Objetos</h3><div class="demo"><div class="p-objetos"><span class="caja"><span class="caja-cuerpo objeto" style="--c:var(--activa)"></span><span class="caja-tapa objeto" style="--c:var(--activa)"></span></span><span class="objeto" style="--c:var(--reduce);width:30px;height:30px"></span><svg width="44" height="44" viewBox="0 0 80 80"><circle cx="40" cy="40" r="26" fill="none" stroke="#879E6E" stroke-width="6" opacity=".45"/><circle cx="66" cy="40" r="7" fill="#879E6E"/></svg></div></div><p class="regla">Tres objetos base: algo cerrado, algo que se dispersa y algo que gira.</p></article>
+      <article class="principio"><h3>Sonido</h3><div class="demo"><div class="p-sonidos"><button type="button" data-sonar="snap">Snap</button><button type="button" data-sonar="clic">Clic</button><button type="button" data-sonar="roce">Roce</button><button type="button" data-sonar="respira">Respiración</button><button type="button" data-sonar="cierre">Cierre</button></div></div><p class="regla">Opcional y apagado al entrar. Respuesta física agradable, nunca efecto de videojuego.</p></article>
+      <article class="principio ancho"><h3>Tipografía</h3><div class="demo"><div class="p-tipo"><b>Esto cuenta.</b><span>Toca una cosa y llévala a Ahora.</span><code>CE · MA · TA · VE · VL · RR</code></div></div><p class="regla">Títulos grandes y apretados (Telegraf Bold; mientras llega el archivo, Urbanist). Instrucciones en Poppins. Códigos en Inter Bold.</p></article>
+      <article class="principio ancho todo"><h3>Color</h3><div class="demo" style="place-items:stretch"><div class="paleta">
+        <div class="color" style="--c:#F7F4ED;--t:#263238;box-shadow:inset 0 0 0 1px var(--linea)"><b>Crema</b><span>#F7F4ED</span><em>Fondo</em></div>
+        <div class="color" style="--c:#263238"><b>Carbón</b><span>#263238</span><em>Texto</em></div>
+        <div class="color" style="--c:#8D6A9E"><b>Violeta</b><span>#8D6A9E</span><em>Identidad</em></div>
+        <div class="color" style="--c:#8082AD"><b>Orienta</b><span>#8082AD</span><em>Algo se hace visible</em></div>
+        <div class="color" style="--c:#E6B456;--t:#263238"><b>Reduce</b><span>#E6B456</span><em>Algo se simplifica</em></div>
+        <div class="color" style="--c:#C65252"><b>Activa</b><span>#C65252</span><em>Algo avanza</em></div>
+        <div class="color" style="--c:#879E6E"><b>Cierra</b><span>#879E6E</span><em>Algo se guarda</em></div>
+      </div></div><p class="regla">Los cuatro colores del método indican función; no decoran.</p></article>
+    </div>
+  </section>
+
+  <!-- B · tres direcciones -->
+  <section class="seccion" id="hero">
+    <div class="cabeza"><span class="codigo">B · Tres direcciones para el hero</span><h2>La primera impresión, tres veces.</h2>
+      <p>Las tres preguntan «¿Dónde hay fricción ahora?» y usan los mismos tres momentos. Cambia cómo se siente. Pruébalas en tu teléfono con «Pantalla completa».</p></div>
+    <div class="telefonos">
+      <div class="direccion">
+        <div class="titulo"><span class="codigo">Dirección 1</span><h3>Objetos sobre la mesa</h3></div>
+        <div class="toma"><span>Aire · mymind</span><span>Entrar por el momento · Headspace</span></div>
+        <div class="telefono" id="t-h1" data-demo="hero-objetos"><div class="vivo"></div><button class="reiniciar" type="button">Reiniciar</button><button class="cerrar-completo" type="button" aria-label="Cerrar pantalla completa">×</button></div>
+        <p class="nota">La marca grande, mucho aire y tres objetos. Cada uno hace lo que dice su frase: la caja se abre, las canicas se separan, el bucle deja de girar.</p>
+        <button class="ampliar" type="button" data-ampliar="t-h1">Pantalla completa</button>
+      </div>
+      <div class="direccion">
+        <div class="titulo"><span class="codigo">Dirección 2</span><h3>Un objeto vivo</h3></div>
+        <div class="toma"><span>Estado vivo · Endel</span><span>Silencio · mymind</span></div>
+        <div class="telefono" id="t-h2" data-demo="hero-estado"><div class="vivo"></div><button class="reiniciar" type="button">Reiniciar</button><button class="cerrar-completo" type="button" aria-label="Cerrar pantalla completa">×</button></div>
+        <p class="nota">Una sola forma que respira. Escoges tu momento y la forma cambia de estado; al tocarla, se resuelve. Casi sin texto.</p>
+        <button class="ampliar" type="button" data-ampliar="t-h2">Pantalla completa</button>
+      </div>
+      <div class="direccion">
+        <div class="titulo"><span class="codigo">Dirección 3</span><h3>La frase es el objeto</h3></div>
+        <div class="toma"><span>Tipografía protagonista · mymind</span><span>Lenguaje humano · Headspace</span></div>
+        <div class="telefono" id="t-h3" data-demo="hero-frase"><div class="vivo"></div><button class="reiniciar" type="button">Reiniciar</button><button class="cerrar-completo" type="button" aria-label="Cerrar pantalla completa">×</button></div>
+        <p class="nota">Lo que te pasa, escrito en grande, es lo que se mueve: las palabras se caen, se callan o dejan de girar. Desliza para cambiar de momento.</p>
+        <button class="ampliar" type="button" data-ampliar="t-h3">Pantalla completa</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- C · tres interacciones -->
+  <section class="seccion" id="interacciones">
+    <div class="cabeza"><span class="codigo">C · Tres conceptos de interacción</span><h2>Se entiende haciendo.</h2>
+      <p>Un concepto por momento. Cada uno recorre Orienta → Reduce → Activa → Cierra; arriba se enciende la fase en la que vas. Todo lo que se arrastra también se puede tocar.</p></div>
+    <div class="telefonos">
+      <div class="direccion">
+        <div class="titulo"><span class="codigo" style="color:var(--activa)">Entra</span><h3>No empiezo</h3></div>
+        <div class="telefono" id="t-entra" data-demo="entra"><div class="vivo"></div><button class="reiniciar" type="button">Reiniciar</button><button class="cerrar-completo" type="button" aria-label="Cerrar pantalla completa">×</button></div>
+        <p class="nota">Objeto cerrado → se abre → adentro solo caben pasos pequeños → escoges uno → encaja en Ahora → se guarda. En la app: la puerta de Primer Paso.</p>
+        <button class="ampliar" type="button" data-ampliar="t-entra">Pantalla completa</button>
+      </div>
+      <div class="direccion">
+        <div class="titulo"><span class="codigo" style="color:#b07f1c">Baja el ruido</span><h3>Todo me abruma</h3></div>
+        <div class="telefono" id="t-ruido" data-demo="ruido"><div class="vivo"></div><button class="reiniciar" type="button">Reiniciar</button><button class="cerrar-completo" type="button" aria-label="Cerrar pantalla completa">×</button></div>
+        <p class="nota">La microexperiencia que pide el brief: cinco cosas flotan, llevas una a Ahora y las demás se alejan. Luego se hace más pequeña. En la app: Sobrecarga.</p>
+        <button class="ampliar" type="button" data-ampliar="t-ruido">Pantalla completa</button>
+      </div>
+      <div class="direccion">
+        <div class="titulo"><span class="codigo" style="color:#5f7a4a">Sal del foco</span><h3>No puedo salir</h3></div>
+        <div class="telefono" id="t-foco" data-demo="foco"><div class="vivo"></div><button class="reiniciar" type="button">Reiniciar</button><button class="cerrar-completo" type="button" aria-label="Cerrar pantalla completa">×</button></div>
+        <p class="nota">El bucle no para y el reloj hace visible el tiempo, sin regañar. Lo detienes manteniendo presionado; se abre y queda una sola decisión. En la app: Sal del Foco.</p>
+        <button class="ampliar" type="button" data-ampliar="t-foco">Pantalla completa</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- D · gramática de movimiento -->
+  <section class="seccion" id="movimiento">
+    <div class="cabeza"><span class="codigo">D · Gramática de movimiento</span><h2>Cómo se mueve un objeto Quiwing.</h2>
+      <p>Primero se ve el método con un solo objeto; después, los cinco comportamientos que lo forman. Las mismas curvas y los mismos sonidos sirven en la web y en las microapps.</p></div>
+    <div class="demo-metodo" data-demo="metodo"><div class="vivo"></div><button class="reiniciar" type="button" style="left:auto;right:14px">Reiniciar</button></div>
+    <div class="gramatica" style="margin-top:12px">
+      <div class="comportamiento" role="button" tabindex="0" data-comp="abrir"><span class="escenario"></span><span><h3>Abrir</h3><p>Un elemento se despliega suavemente. Significa «puedo entrar».</p><dl><dt>Duración</dt><dd>700 ms</dd><dt>Curva</dt><dd>sale rápido, llega lento</dd><dt>Sonido</dt><dd>roce</dd><dt>Método</dt><dd>Orienta</dd></dl></span></div>
+      <div class="comportamiento" role="button" tabindex="0" data-comp="reducir"><span class="escenario"></span><span><h3>Reducir</h3><p>Lo que sobra se aleja y desaparece. Significa «no necesito resolver todo».</p><dl><dt>Duración</dt><dd>900 ms</dd><dt>Curva</dt><dd>suave al salir y al llegar</dd><dt>Sonido</dt><dd>aire</dd><dt>Método</dt><dd>Reduce</dd></dl></span></div>
+      <div class="comportamiento" role="button" tabindex="0" data-comp="encajar"><span class="escenario"></span><span><h3>Encajar</h3><p>Cae en su sitio con un snap. Significa «esto queda aquí».</p><dl><dt>Duración</dt><dd>560 ms</dd><dt>Curva</dt><dd>resorte</dd><dt>Sonido</dt><dd>snap</dd><dt>Método</dt><dd>Activa</dd></dl></span></div>
+      <div class="comportamiento" role="button" tabindex="0" data-comp="guardar"><span class="escenario"></span><span><h3>Guardar</h3><p>Se recoge y descansa. Significa «puedo cerrar».</p><dl><dt>Duración</dt><dd>800 ms</dd><dt>Curva</dt><dd>acelera al guardarse</dd><dt>Sonido</dt><dd>cierre</dd><dt>Método</dt><dd>Cierra</dd></dl></span></div>
+      <div class="comportamiento" role="button" tabindex="0" data-comp="respirar"><span class="escenario"></span><span><h3>Respirar</h3><p>Se expande y se contrae despacio. Significa «bajo intensidad».</p><dl><dt>Duración</dt><dd>4 a 10 s</dd><dt>Curva</dt><dd>onda lenta</dd><dt>Sonido</dt><dd>respiración</dd><dt>Para</dt><dd>Sal del Foco, Día Rojo</dd></dl></span></div>
+    </div>
+  </section>
+
+  <!-- E · storyboard móvil -->
+  <section class="seccion" id="storyboard">
+    <div class="cabeza"><span class="codigo">E · Storyboard móvil</span><h2>La página, en seis pantallas de teléfono.</h2>
+      <p>El orden de la homepage del prototipo. Debajo de cada pantalla: lo que pasa y lo que la persona debería sentir.</p></div>
+    <div class="storyboard">
+      <div class="cuadro"><div class="mini"><b class="marca-mini">Quiwing.</b><span class="l">Pasos claros.<br>Más libertad.</span><span class="q"><i></i>¿Dónde hay fricción ahora?</span></div>
+        <span class="num">01</span><h3>Hero vivo</h3><p>Mucho espacio, la marca y una frase. Se elige una de las tres direcciones.</p><p class="siente">«Esto se ve diferente.»</p></div>
+      <div class="cuadro"><div class="mini"><span class="q" style="margin-top:0"><i></i>¿Dónde hay fricción ahora?</span><span class="fila"><span class="objeto o" style="--c:#C65252;border-radius:7px"></span>Sé qué hacer, pero no empiezo.</span><span class="fila"><span class="objeto o" style="--c:#E6B456"></span>Todo me está hablando al mismo tiempo.</span><span class="fila"><svg class="o" viewBox="0 0 80 80"><circle cx="40" cy="40" r="26" fill="none" stroke="#879E6E" stroke-width="8" opacity=".45"/><circle cx="66" cy="40" r="9" fill="#879E6E"/></svg>Me metí en algo y no logro salir.</span></div>
+        <span class="num">02</span><h3>Tres entradas</h3><p>No son botones: son objetos. Al tocarlos, se mueven.</p><p class="siente">«Esto me pasa.»</p></div>
+      <div class="cuadro"><div class="mini"><span class="grande">Demasiadas cosas.</span><span class="ch">Correo del banco</span><span class="ch" style="align-self:flex-end">Pagar la luz</span><span class="ch">Mensajes del grupo</span><span class="ch" style="align-self:center">Ropa en la silla</span><span class="zona-mini">AHORA</span></div>
+        <span class="num">03</span><h3>Una microexperiencia</h3><p>Baja el ruido: llevas una cosa a Ahora y lo demás se aleja.</p><p class="siente">«Entiendo sin leer muchísimo.»</p></div>
+      <div class="cuadro"><div class="mini"><span class="grande">Así funciona.</span><div class="pasos-mini"><span style="--c:#8082AD"><i></i>Orienta</span><span style="--c:#E6B456"><i></i>Reduce</span><span style="--c:#C65252"><i></i>Activa</span><span style="--c:#879E6E"><i></i>Cierra</span></div></div>
+        <span class="num">04</span><h3>El método, demostrado</h3><p>Un objeto se orienta, se reduce, se mueve y se guarda. Después, una línea que lo explica.</p><p class="siente">«Quiero ver qué pasa.»</p></div>
+      <div class="cuadro"><div class="mini"><span class="grande">Seis áreas.</span>
+        <span class="area"><b>CE</b>¿Tengo batería para sostenerme?</span><span class="area"><b>MA</b>¿Puedo empezar, decidir, recordar y terminar?</span><span class="area"><b>TA</b>¿Puedo manejar mi tiempo y mi foco?</span><span class="area"><b>VE</b>¿Mi entorno me ayuda o me satura?*</span><span class="area"><b>VL</b>¿Puedo poner límites sin desgastarme?*</span><span class="area"><b>RR</b>¿Sé hacia dónde voy y con qué cuento?*</span></div>
+        <span class="num">05</span><h3>Seis áreas</h3><p>Cada área responde a una pregunta reconocible. Sin veinte kits todavía. *Preguntas propuestas, por confirmar.</p><p class="siente">«Hay algo para mí.»</p></div>
+      <div class="cuadro"><div class="mini"><span class="grande">¿Qué está pesando hoy?</span><span class="cta-mini">Prueba una experiencia</span></div>
+        <span class="num">06</span><h3>Prueba Quiwing</h3><p>El cierre lleva a una experiencia real, no a «Comprar ahora».</p><p class="siente">«Quiero probarlo.»</p></div>
+    </div>
+  </section>
+
+  <!-- elección -->
+  <section class="seccion" id="eleccion">
+    <div class="cabeza"><span class="codigo">Tu elección</span><h2>¿Qué dirección se siente Quiwing?</h2>
+      <p>Escoge una, o escribe qué mezclarías. Con eso armamos el prototipo navegable, el paso F del brief.</p></div>
+    <div class="opciones" role="group" aria-label="Dirección del hero">
+      <button class="opcion" type="button" data-dir="1 · Objetos sobre la mesa" aria-pressed="false"><i></i>1 · Objetos sobre la mesa</button>
+      <button class="opcion" type="button" data-dir="2 · Un objeto vivo" aria-pressed="false"><i></i>2 · Un objeto vivo</button>
+      <button class="opcion" type="button" data-dir="3 · La frase es el objeto" aria-pressed="false"><i></i>3 · La frase es el objeto</button>
+    </div>
+    <label for="notas" style="display:block;margin-top:20px;font-weight:600">Lo que te gustó, lo que no y lo que cambiarías</label>
+    <textarea class="notas" id="notas" placeholder="Por ejemplo: me gusta la caja de la dirección 1, pero con el movimiento de la 2."></textarea>
+    <div style="margin-top:14px"><button class="pildora llena" type="button" id="guardar">Guardar mi respuesta</button></div>
+    <p class="estado-envio" id="estado-envio" aria-live="polite"></p>
+  </section>
+</main>
+
+<footer class="envoltura">
+  <span>Quiwing · laboratorio de lenguaje. Primer entregable del brief maestro (A a E). El prototipo navegable (F) se arma después de elegir dirección.</span>
+  <span>Hecho en código. Letras: Urbanist (en lugar de Telegraf Bold), Poppins e Inter. Sin imágenes generadas.</span>
+</footer>
+
+<script src="js/comun.js"></script>
+<script src="js/heroes.js"></script>
+<script src="js/interacciones.js"></script>
+<script src="js/lab.js"></script>
+</body>
+</html>
